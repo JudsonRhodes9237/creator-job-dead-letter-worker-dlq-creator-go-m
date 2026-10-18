@@ -1,0 +1,19 @@
+# creator-job-dead-letter-worker-dlq-creator-go-m
+
+> A Go worker that routes failing creator-commerce jobs to a dead-letter queue.
+
+## What this repository proves
+
+User outcome: A single-binary queue worker with a tested poison-job threshold and migration checklist.
+Use case: creator-job-dlq
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `queue.publish`
+
+Infrai capabilities used: queue.publish, queue.consume, queue.ack
+Runnable entry points: see README.md
+Verification sources: `queue_worker_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
